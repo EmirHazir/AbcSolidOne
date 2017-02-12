@@ -1,0 +1,36 @@
+﻿@model Abc.WebUI.Models.ProductListVM
+@addTagHelper "*,Microsoft.AspNetCore.Mvc.TagHelpers"
+@addTagHelper "*,Abc.WebUI"
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <table class="table table-responsive">
+        <tr>
+            <td class="alert alert-success">Product Name</td>
+            <td class="alert alert-info">Unit Price</td>
+            <td class="alert alert-warning">Units In stock</td>
+            <td class="alert alert-danger">İşlem</td>
+        </tr>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.UnitsInStock</td>
+                <td><a class="btn btn-xs btn-success" asp-controller="Cart" asp-action="AddToCart" asp-route-productId="@item.ProductId">Karta Ekle</a></td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<product-list-pager current-category="@Model.CurrentCategory"
+                    current-page="@Model.CurrentPage"
+                    page-count="@Model.PageCount"
+                    page-size="@Model.PageSize">
+
+</product-list-pager>

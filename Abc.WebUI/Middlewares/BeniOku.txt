@@ -1,0 +1,5 @@
+﻿Burası bizim kendi middleware larımızı yazdığımız yer
+burada yazdığım metod npm kullandığım için dışarıdan bir servis i wwwwroota göstermem gerekiyordu
+onun da tek yolu bu
+böylece burada yazdığım path provider ve yapılan requestleri useStaticFiles ile options olarak belirleyip
+startup clasında bunları cağırdım

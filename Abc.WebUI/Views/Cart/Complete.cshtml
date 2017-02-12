@@ -1,0 +1,51 @@
+﻿@model Abc.WebUI.Models.ShippingDetailsVM
+@addTagHelper "*,Microsoft.AspNetCore.Mvc.TagHelpers"
+@addTagHelper "*,Abc.WebUI"
+@{
+    ViewBag.Title = "Complete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Gönderim Detayı</h2>
+
+<form asp-controller="Cart" asp-action="Complete" method="post">
+
+    <div class="form-group">
+        <label asp-for="ShippingDetails.FirstName"></label>
+        <input asp-for="ShippingDetails.FirstName" class="form-control" placeholder="Adınız" />
+        <span asp-validation-for="ShippingDetails.FirstName"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShippingDetails.LastName"></label>
+        <input asp-for="ShippingDetails.LastName" class="form-control" placeholder="Soyadınız" />
+        <span asp-validation-for="ShippingDetails.LastName"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShippingDetails.Email"></label>
+        <input type="email" asp-for="ShippingDetails.Email" class="form-control" placeholder="Email" />
+        <span asp-validation-for="ShippingDetails.Email"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShippingDetails.Age"></label>
+        <input type="email" asp-for="ShippingDetails.Age" class="form-control" placeholder="Yaşınız" />
+        <span asp-validation-for="ShippingDetails.Age"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShippingDetails.Address"></label>
+        <textarea asp-for="ShippingDetails.Address" class="form-control" placeholder="Adresiniz"></textarea> 
+        <span asp-validation-for="ShippingDetails.Address"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShippingDetails.City"></label>
+        <input asp-for="ShippingDetails.City" class="form-control" placeholder="Şehir" />
+        <span asp-validation-for="ShippingDetails.City"></span>
+    </div>
+
+
+    <input type="submit" value="Siparişi Tamamla" class="btn btn-xs btn-success" />
+</form>

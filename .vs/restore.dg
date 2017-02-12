@@ -1,0 +1,10 @@
+#:C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.WebUI\Abc.WebUI.xproj
+C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.WebUI\Abc.WebUI.xproj|C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Core\Abc.Core.xproj
+C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.WebUI\Abc.WebUI.xproj|C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Entities\Abc.Entities.xproj
+C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.WebUI\Abc.WebUI.xproj|C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Services\Abc.Services.xproj
+C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Entities\Abc.Entities.xproj|C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Core\Abc.Core.xproj
+C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Services\Abc.Services.xproj|C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Core\Abc.Core.xproj
+C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Services\Abc.Services.xproj|C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.DataAccess\Abc.DataAccess.xproj
+C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Services\Abc.Services.xproj|C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Entities\Abc.Entities.xproj
+C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.DataAccess\Abc.DataAccess.xproj|C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Core\Abc.Core.xproj
+C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.DataAccess\Abc.DataAccess.xproj|C:\Users\EmirHazir\Documents\Visual Studio 2015\Projects\Abc\Abc.Entities\Abc.Entities.xproj

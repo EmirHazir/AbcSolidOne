@@ -1,0 +1,24 @@
+﻿ViewComponents klasörünü clasic mvc ile ilişkilendirdiğimizde core tarafında
+PartialView gibi düşünebiliriz
+
+Burada yazacağımız complex yapıyı _Layoutun Categories divi içinde çağıracağım
+
+Burada isimlendirme çok öemli ViewComponent ile bitiyor olması ve bunu ViewComponent ten inherit olması must
+
+örnek olarak
+
+xyzViewComponent:ViewComponent  gibi
+
+burada oluşacak olan metodlar ViewViewComponentResult döndürmesi must
+
+burada işlem bittiğinde bunu görüntüleyebilmek için mutlaka Shared içinde 
+xyzViewComponent için şöyle bir klasörleme ve ardımdan default.cshtml tanımlaması yapmalıyım
+
+örnek olarak bu proje için
+
+Shared/Components/CategoryList/Default.cshtml
+
+
+
+
+

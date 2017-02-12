@@ -1,0 +1,3 @@
+﻿Bu tamamen Core ile gelen bir olay ki burada kendi css ini yazıyorsun ve kullanıyosun
+
+HtmlTargetElement ile görünmesini istediğin isimlendirmeyi yapıyosun clasın başında

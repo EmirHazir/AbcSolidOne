@@ -1,0 +1,21 @@
+﻿@model Abc.WebUI.Models.CategoryListVM
+
+
+    <div class="list-group">
+        @foreach (var item in Model.Categories)
+        {
+            //kategori buraya ProductController daki indexin parametresinden geliyor. Orada yaptığımız trick
+            //haliyle çalışmadığı için direk default olarak çalışan yani ProductManager da return _productDal.GetList(p => p.CategoryId == categoryId ||categoryId== 0); linklere gidiyor
+            //CategoryListViewModel de CurrentCategory i bir Query ile request ettim
+            //Burada bir css hazırlıyorum onun için
+
+            var css = "list-group-item";
+            if (item.CategoryId == Model.CurrentCategory)//eğer gezdiğin kategorinin categoriId si modelden gelen CurrentCategory ise
+            {
+                css += " active"; //cssin değerini değiştirip active diyorum ve bu cssi a tagının clasına basıyorum
+            }
+
+            <a href="/product/index?category=@item.CategoryId" class="@css">@item.CategoryName</a>
+        }
+    </div>
+
