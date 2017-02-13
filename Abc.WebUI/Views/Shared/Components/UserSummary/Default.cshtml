@@ -1,0 +1,14 @@
+﻿@model Abc.WebUI.Models.UserDetailsVM
+
+<ul class="dropdown-menu">
+    
+        @if (!String.IsNullOrEmpty(Model.UserName))
+        {
+            <li>
+                <a>Hoşgeldin @Model.UserName</a>
+            </li>
+            <li>
+                <a asp-controller="Account" asp-action="LogOff">Çıkış Yap</a>
+            </li>
+        }
+</ul>

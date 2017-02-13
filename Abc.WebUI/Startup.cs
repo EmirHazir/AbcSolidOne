@@ -15,6 +15,7 @@ using Abc.WebUI.Middlewares;
 using Abc.WebUI.Services;
 using Abc.WebUI.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Routing;
 
 namespace Abc.WebUI
 {
@@ -59,7 +60,12 @@ namespace Abc.WebUI
             app.UseIdentity(); //Identity
             app.UseSession();
            
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(ConfigureRoutes);//aşşağda metodu yazdım nereden açılacağı projenin
+        }
+
+        private void ConfigureRoutes(IRouteBuilder routeYapilandir)
+        {
+            routeYapilandir.MapRoute("Default", "{controller=Product}/{action=Index}/{id?}");
         }
     }
 }

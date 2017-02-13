@@ -89,8 +89,7 @@ namespace Abc.WebUI.Controllers
             return View(loginVM);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public ActionResult LogOff()
         {
             _signInManager.SignOutAsync().Wait();
