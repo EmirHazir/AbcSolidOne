@@ -1,0 +1,58 @@
+﻿@model Abc.WebUI.Models.LoginVM
+@using System.Threading.Tasks
+@addTagHelper "*,Microsoft.AspNetCore.Mvc.TagHelpers"
+@addTagHelper "*,Abc.WebUI"
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container">
+    <div id="loginBox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Sign In</div>
+            </div>
+        </div>
+        <div style="padding-top:30px" class="panel-body">
+            <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+            <form asp-controller="Account" asp-action="Login" method="post" class="form-horizontal" role="form">
+
+                <div style="margin-bottom:25px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input asp-for="UserName" class="form-control" placeholder="UserName" />
+                    <span asp-validation-for="UserName"></span>
+                </div>
+
+                <div style="margin-bottom:25px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input asp-for="Password" class="form-control" placeholder="Password" />
+                    <span asp-validation-for="Password"></span>
+                </div>
+
+                <div class="input-group">
+                    <div class="checkbox">
+                        <label>
+                            <input asp-for="RememberMe" /> Remember Me
+                        </label>
+                    </div>
+                </div>
+
+                <div style="margin-top:10px"class="form-group">
+                    <div class="col-sm-12 controls">
+                        <input type="submit" class="btn btn-success" value="Giriş" />
+                    </div>
+                </div>
+            </form>
+            <hr />
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <p>Hesabınız Yoksa</p>
+                </div>
+                    <a asp-controller="Account" asp-action="Register">Register</a>
+                
+            </div>
+        </div>
+    </div>
+</div>

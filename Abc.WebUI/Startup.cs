@@ -13,6 +13,8 @@ using Abc.DataAccess.Abstract;
 using Abc.DataAccess.Concrete.EntityFramework;
 using Abc.WebUI.Middlewares;
 using Abc.WebUI.Services;
+using Abc.WebUI.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Abc.WebUI
 {
@@ -37,6 +39,10 @@ namespace Abc.WebUI
             services.AddDistributedMemoryCache();//Sessionu farklı yerlerde tutabilmek
             services.AddSession(); // sessionu kullanabilmek
 
+            //IDENTITIY
+            services.AddDbContext<CustomIdentityDbContext>(options => options.UseSqlServer(@"Server=EMIRHAZIR\SQLEXPRESS; Database=UserLog; User Id=sa; Password=123" ));//Identity database ini ayırıyorum
+         /*   services.AddEntityFramework(Configuration); */services.AddIdentity<CustomIdentityUser,CustomIdentityRole>().AddEntityFrameworkStores<CustomIdentityDbContext>().AddDefaultTokenProviders();//Identityi kullanmak için 
+
             services.AddMvc();
         }
 
@@ -50,8 +56,9 @@ namespace Abc.WebUI
 
             app.UseFileServer(); //node_modules lerin yolunu wwwroot a vericem o yüzden bir static file ekleyeceğim 
             app.UseNodeModules(env.ContentRootPath); // ki bunu kendim yazıyorum Middlewares/AppBuilderExtensions a bak
-
+            app.UseIdentity(); //Identity
             app.UseSession();
+           
             app.UseMvcWithDefaultRoute();
         }
     }

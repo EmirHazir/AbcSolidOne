@@ -1,0 +1,48 @@
+﻿@model Abc.WebUI.Models.ProductAddVM
+@using Abc.WebUI.Models
+@using System.Threading.Tasks
+@addTagHelper "*,Microsoft.AspNetCore.Mvc.TagHelpers"
+@addTagHelper "*,Abc.WebUI"
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<h2>Yeni Ürün Ekle</h2>
+
+<form asp-controller="Admin" asp-action="Insert" method="post" class="col-md-6">
+
+    <div class="form-group">
+        <label asp-for="Product.ProductName" class="col-md-2"></label>
+        <input asp-for="Product.ProductName" class="form-control" placeholder="Ürün Adı" />
+        <span asp-validation-for="Product.ProductName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Product.CategoryId"  class="col-md-2"></label>
+        <select asp-for="Product.CategoryId" class="form-control"
+                asp-items="@(new SelectList(Model.Categories,"CategoryId","CategoryName"))"></select>
+        <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Product.UnitPrice"  class="col-md-2"></label>
+        <input asp-for="Product.UnitPrice" class="form-control" placeholder="Ürün Adı" />
+        <span asp-validation-for="Product.UnitPrice" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Product.UnitsInStock"  class="col-md-2"></label>
+        <input asp-for="Product.UnitsInStock" class="form-control" placeholder="Ürün Adı" />
+        <span asp-validation-for="Product.UnitsInStock" class="text-danger"></span>
+    </div>
+
+    <input type="submit" class="btn btn-success" value="Ekle" />
+
+</form>
+
+<div class="col-md-6">
+    <p>Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.</p>
+    <p>Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.Lorem Ipmsum, seni sana senden eder bu senle olan sensizlikler.</p>
+</div>

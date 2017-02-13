@@ -1,0 +1,34 @@
+﻿@model Abc.WebUI.Models.ProductListVM
+@addTagHelper "*,Microsoft.AspNetCore.Mvc.TagHelpers"
+@addTagHelper "*,Abc.WebUI"
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Ürün Listesi</h2>
+<a class="btn btn-xs btn-success" asp-controller="Admin" asp-action="Insert">Yeni Ürün Ekle</a>
+<div>
+    <table class="table table-responsive">
+        <tr>
+            <td class="alert alert-success">Product Name</td>
+            <td class="alert alert-info">Unit Price</td>
+            <td class="alert alert-warning">Units In stock</td>
+            <td class="alert alert-info">Update</td>
+            <td class="alert alert-danger">Delete</td>
+        </tr>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.UnitsInStock</td>
+
+                <td><a class="btn btn-xs btn-warning" asp-controller="Admin" asp-action="Update" asp-route-productId="@item.ProductId">Ürün Güncelle</a></td>
+
+                <td><a class="btn btn-xs btn-danger" asp-controller="Admin" asp-action="Delete" asp-route-productId="@item.ProductId">Ürün Sil</a></td>
+            </tr>
+        }
+
+    </table>
+</div>
